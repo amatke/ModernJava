@@ -1,0 +1,5 @@
+#ignorisanje .class fajlova
+*.class
+
+#ignorisanje bins foldera
+*/bin
