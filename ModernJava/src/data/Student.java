@@ -58,6 +58,10 @@ public class Student {
 		this.activities = activities;
 	}
 
+	public void printActivities() {
+		activities.forEach( s -> System.out.println(s));
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

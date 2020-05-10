@@ -9,7 +9,7 @@ public class OptionalFilterMapFlatmapExample {
 
 	
 	public static Optional<Student> filterOptional(){
-		Optional<Student> studentOp = Optional.ofNullable(new Student("Mirko", "muski", 1, 4.5, Arrays.asList("Odbojka", "Kosarka", "Plivanje")));
+		Optional<Student> studentOp = Optional.ofNullable(new Student("Mirko", "muski", 4.5, 1, Arrays.asList("Odbojka", "Kosarka", "Plivanje")));
 		
 		studentOp.filter( s -> s.getGender().startsWith("muski"))
 			.ifPresent( student -> System.out.println(student));
@@ -19,7 +19,7 @@ public class OptionalFilterMapFlatmapExample {
 	
 	
 	public static Optional<Student> mapOptional(){
-		Optional<Student> studentOptional = Optional.ofNullable(new Student("Mirko", "muski", 1, 4.5, Arrays.asList("Odbojka", "Kosarka", "Plivanje")));
+		Optional<Student> studentOptional = Optional.ofNullable(new Student("Mirko", "muski", 4.5, 1, Arrays.asList("Odbojka", "Kosarka", "Plivanje")));
 		
 		studentOptional.filter( s -> s.getGender().startsWith("muski"))
 			.map(student -> student.getName());
